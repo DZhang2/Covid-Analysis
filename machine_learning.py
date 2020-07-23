@@ -8,7 +8,7 @@ from sklearn import metrics
 
 # analyze full and reduced data
 data = pd.read_csv("./Data/full_data.csv")
-data = pd.read_csv("./Data/reduced_data.csv")
+# data = pd.read_csv("./Data/reduced_data.csv")
 
 # response variables
 r1 = data["total_deaths"]
@@ -19,7 +19,7 @@ r4 = data["total_cases_per_million"]
 # drop variables confounded to response variables & categorical variables
 data.drop(columns=["total_deaths_per_million", "total_deaths", "iso_code", "Unnamed: 0", "continent",
             "location", "date", "tests_units"], inplace=True)
-data = data[["stringency_index", "diabetes_prevalence", "population"]]
+# data = data[["stringency_index", "diabetes_prevalence", "population"]]
 data.fillna(0, inplace=True)
 
 # split into training and testing data
