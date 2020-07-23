@@ -6,7 +6,7 @@ def load_file(path):
     file = pd.read_csv(path)
     return file
 
-us = load_file("USData.csv")
+us = load_file("./Data/USData.csv")
 recent = us.tail(37)
 training = recent.head(30)
 testing = recent.tail(7)
@@ -23,5 +23,5 @@ print(xBar2, sigma2)
 testing["new_deaths"] = np.log(testing["new_deaths"])
 testing_data = testing[["new_tests", "new_deaths"]]
 training_data = training[["new_tests", "new_deaths"]]
-testing_data.to_csv("TestingData.csv")
-training_data.to_csv("TrainingData.csv")
+testing_data.to_csv("./Data/TestingData.csv")
+training_data.to_csv("./Data/TrainingData.csv")

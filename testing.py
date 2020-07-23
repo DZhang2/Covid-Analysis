@@ -18,7 +18,7 @@ us["Mortality Standardized Total"] = us["total_deaths"] / mortality_rate
 us["Estimated Percent Infected"] = us["Mortality Standardized Total"]/us["population"]*100
 us = us[["date", "new_cases", "new_deaths", "new_tests", "total_cases", "total_deaths", "IFR^", "Percent Positivity", "Positivity Standardized Cases", "Mortality Standardized Cases",
         "Mortality Standardized Total", "Estimated Percent Infected"]]
-us.to_csv("USData.csv")
+us.to_csv("./Data/USData.csv")
 recent = us.tail(30)
 
 # positivity standardization changes by increasing % population infected
