@@ -5,4 +5,5 @@ Conducted various analyses including
 * Model diagnostic analysis and assumption
 * Statistical process control (CUSUM & EWMA)
 * Forecasting (Holt-Winters single, double, and triple exp. smoothing)
-* Analysis of indicators (ANOVA)
+* Analysis of indicators (using ANOVA)
+* Prediction from indicators (linear regression)
